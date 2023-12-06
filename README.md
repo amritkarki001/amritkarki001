@@ -3,8 +3,8 @@
   <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/>
 </h1>
 - 👀 I’m interested in Programming And Im a Front-end Developer.<br>
-- 🌱 I’m currently learning Python and Graphic Design.
-
+- 🧑🏻‍💻 I’m a Graphic Designer. <br>
+- 🌱 I’m currently learning UI/UX.
 
 
 <div id="header" align="center">
