@@ -13,7 +13,7 @@
 </div><br>
 
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=amritkarki001&theme=gruvbox&border_radius=50&card_width=500)](https://git.io/streak-stats)
+<a href="https://git.io/streak-stats" align="center"><img src="https://streak-stats.demolab.com?user=amritkarki001&theme=gruvbox&border_radius=50&card_width=500" alt="GitHub Streak" /></a>
 
 <div id="badges" align="center">
 	<h2>Connect with me</h2>
