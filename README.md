@@ -15,13 +15,13 @@
 <div><img height="200em" width="400em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=amritkarki001&show_icons=true&theme=dark&include_all_commits=true&count_private=true" />
     <img height="200em" width="400em" src="https://github-readme-streak-stats.herokuapp.com/?user=amritkarki001&theme=dark" alt="amritkarki001" />
 </div>
-<!--
+
 <div style="text-align: center;">
   <a href="https://git.io/streak-stats">
     <img src="https://streak-stats.demolab.com?user=amritkarki001&theme=gruvbox&border_radius=50&card_width=500" alt="GitHub Streak" />
   </a>
 </div>
--->
+
 <div id="badges" align="center">
 	<h2>Connect with me</h2>
 <a href="https://www.linkedin.com/in/amrit-karki-64804b272">
