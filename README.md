@@ -4,7 +4,7 @@
 </h1>
 - 👀 I’m interested in Programming And Im a Front-end Developer.<br>
 - 🧑🏻‍💻 I’m a Graphic Designer. <br>
-- 🌱 I’m currently learning Figma.
+- 🌱 I’m currently learning Figma and Flutter.
 
 
 <div id="header" align="center">
