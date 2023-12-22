@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Storage</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+    <style>
+        body {
+            padding: 50px;
+            background-color: #495564;
+        }
+        
+        .photo-container {
+            position: relative;
+            cursor: default;
+            overflow: hidden;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: floralwhite
+        }
+        
+        .photo-container img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .photo-container:hover img {
+            transform: scale(1.1);
+        }
+        
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .overlay img {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 5px;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #fff;
+            font-size: 34px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="photo-container" onclick="openFullScreen('images/foodad.png')" data-toggle="tooltip" data-placement="top" title="Product Ad">
+                    <img src="images/foodad.png" alt="Photo 1">
+                    <a>
+
+                        Discount Flyer
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="photo-container" onclick="openFullScreen('images/kumari.png')" data-toggle="tooltip" data-placement="top" title="Flyer">
+                    <img src="images/kumari.png" alt="Photo 2">
+                    <a>
+                       Kumari Flyer
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="photo-container" onclick="openFullScreen('images/travel.png')" data-toggle="tooltip" data-placement="top" title="Flyer">
+                    <img src="images/travel.png" alt="Photo 1">
+                    <a>
+
+                       Restaurent Ad
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="photo-container" onclick="openFullScreen('images/bike rental.png')" data-toggle="tooltip" data-placement="top" title="Poster">
+                    <img src="images/bike rental.png" alt="Photo 2">
+                    <a>
+                       Poster
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="photo-container" onclick="openFullScreen('images/shoe ad.png')" data-toggle="tooltip" data-placement="top" title="Photo 2 Details">
+                    <img src="images/shoe ad.png" alt="Photo 2">
+                    <a>
+                       ShoeAd
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="photo-container" onclick="openFullScreen('images/headphone  ad.png')" data-toggle="tooltip" data-placement="top" title="Photo 2 Details">
+                    <img src="images/headphone  ad.png" alt="Photo 2">
+                    <a>
+                        Headphone Post/Ad For social media
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="photo-container" onclick="openFullScreen('images/cartshirt.png')" data-toggle="tooltip" data-placement="top" title="Photo 2 Details">
+                    <img src="images/cartshirt.png" alt="Photo 2">
+                    <a>
+                        Merch
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="photo-container" onclick="openFullScreen('images/hoodie.png')" data-toggle="tooltip" data-placement="top" title="Photo 2 Details">
+                    <img src="images/hoodie.png" alt="Photo 2">
+                    <a>
+                      Hoodie Merch
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="photo-container" onclick="openFullScreen('images/hoodies.png')" data-toggle="tooltip" data-placement="top" title="Photo 2 Details">
+                    <img src="images/hoodies.png" alt="Photo 2">
+                    <a>
+                      Hoodie Merch
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="photo-container" onclick="openFullScreen('images/Tshirt-hoodie merch.png')" data-toggle="tooltip" data-placement="top" title="Photo 2 Details">
+                    <img src="images/Tshirt-hoodie merch.png" alt="Photo 2">
+                    <a>
+                   Merch
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="photo-container" onclick="openFullScreen('images/Tshirt-hoodie.png')" data-toggle="tooltip" data-placement="top" title="Photo 2 Details">
+                    <img src="images/Tshirt-hoodie.png" alt="Photo 2">
+                    <a>
+                     Merch
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="photo-container" onclick="openFullScreen('images/srmart.png')" data-toggle="tooltip" data-placement="top" title="Photo 2 Details">
+                    <img src="images/srmart.png" alt="Photo 2">
+                    <a>
+                     Typography
+                    </a>
+                </div>
+            </div>
+            <!-- Add more columns for additional photos -->
+
+            <!-- Full Screen Overlay -->
+            <div class="overlay" onclick="closeFullScreen()">
+                <span class="close-btn" onclick="closeFullScreen()">&times;</span>
+                <img id="fullscreen-img" src="" alt="Full Screen">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+
+        function openFullScreen(src) {
+            const overlay = document.querySelector('.overlay');
+            const fullscreenImg = document.getElementById('fullscreen-img');
+
+            fullscreenImg.src = src;
+            overlay.style.display = 'flex';
+        }
+
+        function closeFullScreen() {
+            const overlay = document.querySelector('.overlay');
+            overlay.style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>
