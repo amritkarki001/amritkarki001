@@ -11,9 +11,9 @@
 
 
  
-  
+  <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
 
- <img src="images/gif.gif" alt="Photo 1" width="100>
+ 
 
 
 </div><br>
@@ -21,7 +21,7 @@
 <div><img height="200em" width="400em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=amritkarki001&show_icons=true&theme=dark&include_all_commits=true&count_private=true" />
     <img height="200em" width="400em" src="https://github-readme-streak-stats.herokuapp.com/?user=amritkarki001&theme=dark" alt="amritkarki001" />
 </div>
-<!--  <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
+<!--  
 <div style="text-align: center;">
   <a href="https://git.io/streak-stats">
     <img src="https://streak-stats.demolab.com?user=amritkarki001&theme=gruvbox&border_radius=50&card_width=500" alt="GitHub Streak" />
