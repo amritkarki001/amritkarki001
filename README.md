@@ -8,9 +8,9 @@
 
 
 <div id="header" align="center">
-	
-  <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
-</div><br>
+	<!--
+  <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>-->
+<div style="width:100%;height:0;padding-bottom:75%;position:relative;"><iframe src="https://giphy.com/embed/qgQUggAC3Pfv687qPC" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/dommespace-domme-space-programador-qgQUggAC3Pfv687qPC">via GIPHY</a></p></div><br>
 
 <div><img height="200em" width="400em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=amritkarki001&show_icons=true&theme=dark&include_all_commits=true&count_private=true" />
     <img height="200em" width="400em" src="https://github-readme-streak-stats.herokuapp.com/?user=amritkarki001&theme=dark" alt="amritkarki001" />
