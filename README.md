@@ -2,7 +2,7 @@
   Hey there, I'm Amrit
   <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/>
 </h1>
-	I'm AMRIT KARKI
+	I'm AMRIT KARKI<br>
 - 🧑🏻‍💻 I’m a Graphic Designer. <br>
 - 🌱 I’m currently learning Figma.
 
@@ -23,6 +23,7 @@
 </div>
 <!--   <div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/hS42TuYYnANLFR9IRQ" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/stickers/programming-404-topnode-hS42TuYYnANLFR9IRQ">via GIPHY</a></p>
 <div style="text-align: center;">
+- 👀 I’m interested in Programming And Im a Front-end Developer.<br>
   <a href="https://git.io/streak-stats">
     <img src="https://streak-stats.demolab.com?user=amritkarki001&theme=gruvbox&border_radius=50&card_width=500" alt="GitHub Streak" />
   </a>
