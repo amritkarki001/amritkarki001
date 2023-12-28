@@ -2,7 +2,7 @@
   Hey there, I'm Amrit
   <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/>
 </h1>
-- 👀 I’m interested in Programming And Im a Front-end Developer.<br>
+	I'm AMRIT KARKI
 - 🧑🏻‍💻 I’m a Graphic Designer. <br>
 - 🌱 I’m currently learning Figma.
 
