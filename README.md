@@ -20,6 +20,11 @@
     <img height="200em" width="400em" src="https://github-readme-streak-stats.herokuapp.com/?user=amritkarki001&theme=dark" alt="amritkarki001" />
 </div>
 
+<div id="skills" align="center">
+	<h2>Skills</h2>
+	<p>Python | Figma | HTML | CSS | Photoshop | Illustrator</p>
+</div>
+
 <div id="badges" align="center">
 	<h2>Connect with me</h2>
 <a href="https://www.linkedin.com/in/amrit-karki-64804b272">
