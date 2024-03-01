@@ -5,6 +5,7 @@
 	I'm AMRIT KARKI<br>
  
  - 🧑🏻‍💻 I’m a UI/UX Designer.
+ - 🌐 Also a Front-End Developer.
 
 <div id="header" align="center">
  
@@ -67,7 +68,7 @@
 
 <div id="skills" align="center">
 	<h2>Skills</h2>
-	<p>Python | Figma | HTML | CSS | Photoshop | Illustrator</p>
+	<p>Figma | HTML | CSS | Photoshop | Illustrator Python | Python | </p>
 </div>
 
 <div id="badges" align="center">
