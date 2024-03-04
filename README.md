@@ -24,7 +24,7 @@
 
 <div id="badges" align="center">
 	<h2>Connect with me</h2>
-<a href="https://www.linkedin.com/in/amrit-karki-64804b272">
+<a href="https://www.linkedin.com/in/amritkarkii001/">
  	 <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
 	
 <a href="https://www.youtube.com/@karkivlogs001">
