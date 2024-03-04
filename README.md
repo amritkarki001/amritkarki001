@@ -42,5 +42,6 @@
 <br>
 
 
-<img src="https://komarev.com/ghpvc/?username=sudhirkarki&style=flat-square&color=green" alt=""/>
+<img src="https://komarev.com/ghpvc/?username=sudhrikarki&style=flat-square&color=green" alt=""/>
+
 </div>
