@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works</title>
+    <link rel="stylesheet" href="Resume/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #096709;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .folders {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 260px;
+            background-color: transparent;
+            cursor: pointer;
+        }
+        
+        .folder {
+            padding: 5px;
+            border: 2px solid #ffc404;
+            border-radius: 35px;
+            cursor: pointer;
+        }
+        
+        .folder.active {
+            background-color: #f85611;
+            color: #ffffffc4;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 20px;
+        }
+        
+        .image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        
+        .image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .image:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+        
+        .addesigns {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 20px;
+        }
+        
+        .addesigns .image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        
+        .addesigns .image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .addesigns .image:hover {
+            transform: scale(1.1);
+        }
+        
+        .fullscreen-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+        
+        .fullscreen-image {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        
+        .close-button,
+        .arrow-button {
+            position: absolute;
+            font-size: 50px;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        .close-button {
+            top: 10px;
+            right: 10px;
+        }
+        
+        .arrow-button.prev {
+            left: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .arrow-button.next {
+            right: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 0px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const gallery = document.querySelector('.gallery');
+            const overlay = document.createElement('div');
+            overlay.classList.add('fullscreen-overlay');
+            let currentIndex;
+
+            gallery.addEventListener('click', function(event) {
+                if (event.target.tagName === 'IMG') {
+                    currentIndex = Array.from(gallery.querySelectorAll('.image')).indexOf(event.target.parentElement);
+                    showImage(currentIndex);
+                }
+            });
+
+            function showImage(index) {
+                const images = document.querySelectorAll('.gallery .image img');
+
+                const fullscreenImage = document.createElement('img');
+                fullscreenImage.classList.add('fullscreen-image');
+                fullscreenImage.src = images[index].src;
+
+                const closeButton = document.createElement('span');
+                closeButton.classList.add('close-button', 'arrow-button');
+                closeButton.innerHTML = '&times;';
+                closeButton.addEventListener('click', function() {
+                    hideOverlay();
+                });
+
+                const prevButton = document.createElement('span');
+                prevButton.classList.add('arrow-button', 'prev');
+                prevButton.innerHTML = '&#9665;';
+                prevButton.addEventListener('click', function() {
+                    showImage((index - 1 + images.length) % images.length);
+                });
+
+                const nextButton = document.createElement('span');
+                nextButton.classList.add('arrow-button', 'next');
+                nextButton.innerHTML = '&#9655;';
+                nextButton.addEventListener('click', function() {
+                    showImage((index + 1) % images.length);
+                });
+
+                overlay.innerHTML = '';
+                overlay.appendChild(fullscreenImage);
+                overlay.appendChild(closeButton);
+                overlay.appendChild(prevButton);
+                overlay.appendChild(nextButton);
+
+                document.body.appendChild(overlay);
+                overlay.style.display = 'flex';
+
+                setTimeout(function() {
+                    overlay.style.opacity = 1;
+                }, 0);
+
+                overlay.addEventListener('click', function(event) {
+                    if (event.target === overlay) {
+                        hideOverlay();
+                    }
+                });
+
+                document.addEventListener('keydown', function(event) {
+                    if (event.key === 'Escape') {
+                        hideOverlay();
+                    } else if (event.key === 'ArrowLeft') {
+                        showImage((index - 1 + images.length) % images.length);
+                    } else if (event.key === 'ArrowRight') {
+                        showImage((index + 1) % images.length);
+                    }
+                });
+
+                function hideOverlay() {
+                    overlay.style.opacity = 0;
+                    setTimeout(function() {
+                        overlay.style.display = 'none';
+                    }, 300);
+                }
+            }
+        });
+
+        function openFolder(folderName) {
+            console.log('Opening folder:', folderName);
+
+            const gallery = document.querySelector('.gallery');
+            const smadDesignsGallery = document.querySelector('.addesigns');
+
+            if (folderName === 'AdDesigns') {
+                gallery.style.display = 'grid';
+                smadDesignsGallery.style.display = 'none';
+            } else {
+                gallery.style.display = 'none';
+                smadDesignsGallery.style.display = 'grid';
+            }
+
+            const folders = document.querySelectorAll('.folder');
+            folders.forEach(folder => {
+                folder.classList.remove('active');
+            });
+
+            const selectedFolder = document.querySelector(`.folder[data-folder="${folderName}"]`);
+            if (selectedFolder) {
+                selectedFolder.classList.add('active');
+            }
+        };
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Works</h1>
+        <!--
+        <section class="folders">
+            <div class="folder" data-folder="flyer" onclick="openFolder('flyer')">Flyer</div>
+            <div class="folder" data-folder="AdDesigns" onclick="openFolder('AdDesigns')">Ad Designs</div>
+            <div class="folder" data-folder="thumbnail" onclick="openFolder('thumbnail')">Thumbnail</div>
+        </section>
+  -->
+    </header>
+
+    <main>
+
+        <div class="gallery">
+            <div class="image" onclick="openFullscreenImage('images/shoe ad.png')">
+                <img src="images/shoe ad.png" alt="Image 1">
+            </div>
+            <div class="image" onclick="openFullscreenImage('images/headphone  ad.png')">
+                <img src="images/headphone  ad.png" alt="Image 2">
+            </div>
+
+            <div class="image" onclick="openFullscreenImage(' images/Tshirt-hoodie merch.png')">
+                <img src=" images/Tshirt-hoodie merch.png" alt="Image 3">
+            </div>
+            <div class="image" onclick="openFullscreenImage(' images/Tshirt-hoodie.png')">
+                <img src=" images/Tshirt-hoodie.png" alt="Image 3">
+            </div>
+            <div class="image" onclick="openFullscreenImage(' images/srmart.png')">
+                <img src=" images/srmart.png" alt="Image 3">
+            </div>
+           
+            <div class="image" onclick="openFullscreenImage(' images/kumari.png')">
+                <img src=" images/kumari.png" alt="Image 3">
+            </div>
+            <div class="image" onclick="openFullscreenImage(' images/cartshirt.png')">
+                <img src=" images/cartshirt.png" alt="Image 3">
+            </div>
+
+            <div class="image" onclick="openFullscreenImage(' images/hoodie.png')">
+                <img src=" images/hoodie.png" alt="Image 3">
+            </div>
+            <!-- Add more images as needed -->
+        </div>
+
+        <div class="addesigns" style="display: none;">
+            <div class="image" onclick="openFullscreenImage('images/headphone  ad.png')">
+                <img src="images/headphone  ad.png" alt="Ad Design 1">
+            </div>
+
+            <!-- Add more images for Ad Designs as needed -->
+        </div>
+    </main>
+
+    <div class="fullscreen-overlay" onclick="closeFullscreenImage()">
+        <img class="fullscreen-image" src="" alt="Fullscreen Image">
+    </div>
+
+    <footer>
+        <p>&copy; A.Karki 2023 Photo Storage</p>
+    </footer>
+
+</body>
+
+</html>
