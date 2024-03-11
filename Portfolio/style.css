@@ -42,7 +42,7 @@ button:hover {
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #000000;
     padding-top: 80px; /* Add padding to top of body to make space for the header */
     min-height: 100vh;
 }
