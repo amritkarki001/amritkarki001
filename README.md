@@ -5,7 +5,7 @@
 	I'm AMRIT KARKI<br>
  
  - 🧑🏻‍💻 I’m a UI/UX Designer.
- - 🌐 Also a Front-End Developer.
+ - 🌐 Also a Web Developer.
 
 <div id="header" align="center">
  
