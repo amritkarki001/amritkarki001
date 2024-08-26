@@ -4,16 +4,13 @@
 </h1>
 	I'm AMRIT KARKI<br>
 
-// - 🧑🏻‍💻 I’m a UI/UX Designer.
- //- 🌐 Also a Web Designer.
-<div id="header" align="center">
+- 🧑🏻‍💻 I’m a UI/UX Designer.
+- 🌐 Also a Web Designer.
  
- <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
-
-</div><br>
-
-<div><img height="200em" width="400em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=amritkarki001&show_icons=true&theme=dark&include_all_commits=false&count_private=false" />
-    <img height="200em" width="400em" src="https://github-readme-streak-stats.herokuapp.com/?user=amritkarki001&theme=dark" alt="amritkarki001" />
+<div id="header" align="center <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
+	/div><br<div><img height="200em" width="400em" src="https://github-readme-stats-eight-theta.vercel.app/apiusername=amritkarki001&show_icons=true&theme=dark&include_all_commits=false&count_private=false" />
+    <img
+	   t="200em" width="400em" src="https://github-readme-streak-stats.herokuapp.com/?user=amritkarki001&theme=dark" alt="amritkarki001" />
 </div>
 
 <div id="skills" align="center">
